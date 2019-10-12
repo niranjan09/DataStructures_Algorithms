@@ -29,10 +29,31 @@ def dfs_recursive(graph, current_node = None, explored_nodes = {}):
                 explored_nodes = dfs_recursive(graph, next_node, explored_nodes)
         explored_nodes[current_node] = 1
         return explored_nodes
-        
-        
+
+def dfs_stack(graph, start_node = None):
+    if(graph):
+        if(not start_node):
+            start_node = next(iter(graph))
+        stack = [start_node]
+        explored_nodes = {start_node:0}
+        while(stack):
+            current_node = stack[-1]
+            if(explored_nodes[current_node] != 0):
+                explored_nodes[current_node] = 2
+                stack.pop()
+                continue
+            else:
+                explored_nodes[current_node] = 1
+                print(current_node)
+                for next_node in graph[current_node]:
+                    if(next_node not in explored_nodes):
+                        stack.append(next_node)
+                        explored_nodes[next_node] = 0
+                
+            
+                
 
 if __name__ == '__main__':
     graph = {0: [1, 2], 1: [3], 2: [4, 5], 3: [], 4: [], 5: [0] }
     #bfs(graph, 0)
-    dfs_recursive(graph, 0)
+    dfs_stack(graph, 0)
