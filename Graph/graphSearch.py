@@ -57,3 +57,4 @@ if __name__ == '__main__':
     graph = {0: [1, 2], 1: [3], 2: [4, 5], 3: [], 4: [], 5: [0] }
     #bfs(graph, 0)
     dfs_stack(graph, 0)
+
