@@ -1,4 +1,5 @@
 from functools import lru_cache
+import time
 
 import sys
 # By default system's recusion limit is not sufficient, so setting it to appropriate value
@@ -19,7 +20,9 @@ def getFiboModmCycle(m):
     
 
 if '__main__' == __name__:
-    #print(nthFibonacciModmRecusion(10000, 10**9+7))
+    start_time = time.time()
+    print(nthFibonacciModmRecusion(100, 10**9+7))
+    print("Total time used:", time.time() - start_time)
     #for mi in range(2, 100):
     #    print(len(getFiboModmCycle(mi)))
-    print(len(getFiboModmCycle(10**7)))
+    #print(len(getFiboModmCycle(10**7)))

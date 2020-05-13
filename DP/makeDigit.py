@@ -1,3 +1,5 @@
+# Code to generate one number from another;
+# The only operations permissible are *2 and -1.
 d = {}
 def solution(n, m):
     #print(n, m)

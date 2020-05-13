@@ -1,7 +1,7 @@
 # Kadane's algorithm
 def getMaxSumContiguousArray(arr):
-    start_max, end_max, max_sum= 0, 0, -999999999
-    start_current, end_current, current_sum  = 0, 0, -999999999
+    start_max, end_max, max_sum= 0, 0, float('-inf')
+    start_current, end_current, current_sum  = 0, 0, float('-inf')
     for numi, num in enumerate(arr):
         if(num > current_sum + num):
             start_current = end_current = numi

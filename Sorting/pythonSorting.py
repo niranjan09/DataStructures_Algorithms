@@ -9,9 +9,23 @@ list.sort vs sorted functions:
     
 """
 # To sort list of tuples
-l = [(5, 2), (3, 4), (1, 4)]
+l = [(5, 2), (3, 4), (1, 4), (3, 3), (3, 2), (3, 5)]
 print(sorted(l))    # works, but better to mention keys explicitly!
 print(sorted(l))
 l.sort(key = lambda t: t[0])
+# Here, observe that, when we sort based on first element only, then 2nd elements are not sorted when 1st element is same
 print(l)
+# -------------------------------------------------------------------------------
+def compare(x, y):
+    # code written for reverse order
+    # If you want normal order(increasing) then reverse the signs/symbols
+    if(x<y): return 1
+    elif(y<x): return -1
+    else: return 0
+# Import this to write your own comparator function and use it for sorting
+from functools import cmp_to_key
+l.sort(key = cmp_to_key(compare))
+# we wrote our own comparator, for sorting in decreasing order
+print(l)
+#--------------------------------------------------------------------------------
 

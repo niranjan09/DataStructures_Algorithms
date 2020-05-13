@@ -1,9 +1,12 @@
 #include"cstdio"
 #include<iostream>
+#include<map>
+#include<utility>
 #include <unordered_map>
 #include <functional>
 #include <utility>
-
+#define FOR(i, s, e) for(int i=s; i<e; ++i)
+using UMii=std::unordered_map<int, int>;
 using namespace std;
 
 
@@ -26,5 +29,25 @@ int main(){
     for(int i = 0; i< 10; ++i){
         cout<<u[make_pair(i, i+1)];
     }
+    
+    // Unordered map of unordered maps
+    unordered_map<int, UMii> u1;
+    FOR(i, 0, 10){
+        //UMii u2;
+        // No need to explicitly create new object and then assign, we can directly
+        // assign the value, unless and untill types are matching.
+        FOR(j, 0, 10){
+            u1[i][j] = i*j;
+        }
+        //cout<<u1[i].size()<<u1.size();
+    }
+    FOR(i, 0, 10){
+        FOR(j, 0, 10){
+            cout<<u1[i][j]<<" ";
+        }   
+        cout<<endl;
+    }
+    
+    
     return 0;    
 }
