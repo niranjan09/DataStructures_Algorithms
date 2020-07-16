@@ -1,5 +1,29 @@
-from collections import deque
+from collections import deque, defaultdict
 
+def topoSortByDFS(graph):
+    toposort = []
+    visited = defaultdict(int)
+    def dfs(node):
+        #print(node)
+        visited[node] = 1
+        #print(visited)
+        for nn in graph[node]:
+            if not visited[nn]:
+                dfs(nn)
+            if visited[nn] == 1:
+                return 0
+        visited[node] = 2
+        toposort.append(node)
+    for node in graph:
+        if(not visited[node]):
+            dfs(node)
+        if visited[node] == 1:
+            return 0
+    toposort = toposort[::-1]
+    return toposort
+    
+
+# Kahn's Algorithms
 def topologicalByBFS(graph, start = None):
     inCount = {}
     exploredNodes = {}
@@ -36,6 +60,7 @@ def topologicalByBFS(graph, start = None):
             
 
 #graph with cycle
-graph = {0: [1, 2], 1: [3], 2: [4, 5], 3: [], 4: [], 5: [0], 6:[0] }
-#graph = {1: [2, 3], 2: [4], 3: [4, 5], 4: [5, 6], 5: [6], 6: []}
-print(topologicalByBFS(graph))
+#graph = {0: [1, 2], 1: [3], 2: [4, 5], 3: [], 4: [], 5: [0], 6:[0] }
+graph = {1: [2, 3], 2: [4], 3: [4, 5], 4: [5, 6], 5: [6], 6: []}
+#print(topologicalByBFS(graph))
+print(topoSortByDFS(graph))
