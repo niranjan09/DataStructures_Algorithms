@@ -15,13 +15,14 @@ using LL = long long;
 #define PB(vi) push_back(vi)
 #define POP(vi) pop_back(vi)
 #define UM unordered_map
-#defin US unordered_set
+#define US unordered_set
 
 using PII = pair<int, int>; using PLL = pair<LL, LL>;
 using VI = vector<int>; using VL = vector<LL>;
 using VVI = vector<VI>; using VVL = vector<VL>;
 using VPII = vector<PII>; using VPLL = vector<PLL>;
 using UMII = UM<int, int>; using UMLL = UM<LL, LL>;
+using UMCI = UM<char, int>; using UMCL = UM<char, LL>;
 using USI = US<int>; using USL = US<LL>;
 /* Start of commonly used functions */
 void SC(int &i) {scanf("%d", &i);}
