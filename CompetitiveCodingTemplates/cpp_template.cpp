@@ -2,9 +2,9 @@
 using namespace std;
 
 /* Start of commonly used datatypes and constructs*/
-using LL = long long;
-#define FOR(i, s, e) for(LL i = s; i<e; ++i)
-#define RFOR(i, s, e) for(LL i = s; i>e; --i)
+using L = long long;
+#define FOR(i, s, e) for(L i = s; i<e; ++i)
+#define RFOR(i, s, e) for(L i = s; i>e; --i)
 
 #define F first
 #define S second
@@ -17,20 +17,19 @@ using LL = long long;
 #define UM unordered_map
 #define US unordered_set
 
-using PII = pair<int, int>; using PLL = pair<LL, LL>;
-using VI = vector<int>; using VL = vector<LL>;
+using PII = pair<int, int>; using PLL = pair<L, L>;
+using VI = vector<int>; using VL = vector<L>;
 using VVI = vector<VI>; using VVL = vector<VL>;
 using VPII = vector<PII>; using VPLL = vector<PLL>;
-using UMII = UM<int, int>; using UMLL = UM<LL, LL>;
-using UMCI = UM<char, int>; using UMCL = UM<char, LL>;
-using USI = US<int>; using USL = US<LL>;
+using UMII = UM<int, int>; using UMLL = UM<L, L>;
+using USI = US<int>; using USL = US<L>;
 /* Start of commonly used functions */
 void SC(int &i) {scanf("%d", &i);}
 void SC(int &i, int &j) {scanf("%d %d", &i, &j);}
 void SC(int &i, int &j, int &k) {scanf("%d %d %d", &i, &j, &k);}
-void SC(LL &i) {scanf("%lld", &i);}
-void SC(LL &i, LL &j) {scanf("%lld %lld", &i, &j);}
-void SC(LL &i, LL &j, LL &k) {scanf("%lld %lld %lld", &i, &j, &k);}
+void SC(L &i) {scanf("%lld", &i);}
+void SC(L &i, L &j) {scanf("%lld %lld", &i, &j);}
+void SC(L &i, L &j, L &k) {scanf("%lld %lld %lld", &i, &j, &k);}
 
 void print(VL arr, const string sep = " ", const string end = "\n"){FOR(i, 0, SZ(arr)) printf("%lld%s", arr[i], sep.c_str()); printf("%s", end.c_str());}
 void print(VI arr, const string sep = " ", const string end = "\n"){FOR(i, 0, SZ(arr)) printf("%d%s", arr[i], sep.c_str()); printf("%s", end.c_str());}
@@ -40,13 +39,38 @@ void print(VI arr, const string sep = " ", const string end = "\n"){FOR(i, 0, SZ
 const int INF = 1e9;
 const int MOD = 1e9+7;
 
+void solve(){
+    int m, n;
+    SC(m, n);
+    
+    
+    
+        
+}
+
 int main(){
     int T;
     SC(T);
     while(T--){
-        int m, n;
-        SC(m, n);
-        
+        solve();
     }
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
