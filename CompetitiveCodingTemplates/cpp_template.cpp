@@ -31,8 +31,8 @@ void SC(L &i) {scanf("%lld", &i);}
 void SC(L &i, L &j) {scanf("%lld %lld", &i, &j);}
 void SC(L &i, L &j, L &k) {scanf("%lld %lld %lld", &i, &j, &k);}
 
-void print(VL arr, const string sep = " ", const string end = "\n"){FOR(i, 0, SZ(arr)) printf("%lld%s", arr[i], sep.c_str()); printf("%s", end.c_str());}
-void print(VI arr, const string sep = " ", const string end = "\n"){FOR(i, 0, SZ(arr)) printf("%d%s", arr[i], sep.c_str()); printf("%s", end.c_str());}
+void print(VL arr, const string sep = " ", const string end = "\n"){FOR(i, 0, SZ(arr) - 1) printf("%lld%s", arr[i], sep.c_str()); printf("%lld", arr.back()); printf("%s", end.c_str());}
+void print(VI arr, const string sep = " ", const string end = "\n"){FOR(i, 0, SZ(arr) - 1) printf("%d%s", arr[i], sep.c_str()); printf("%d", arr.back()); printf("%s", end.c_str());}
 
 
 /* Start of commonly used constants */
